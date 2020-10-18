@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "MultiFactorAuth"
+    }
+  },
+  "defaultProject": "MultiFactorAuth",
+  "cli": {
+    "analytics": false
+  }
 }
