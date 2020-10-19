@@ -10,6 +10,10 @@ export class SignUpComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    console.log("Sign Up Page!");
+  }
+  signUpUser(){
+    console.log("Signing Up User");
   }
 
 }

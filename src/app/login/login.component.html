@@ -15,20 +15,22 @@
           <div class="card-header bg-white pb-5">
             <div class="text-lg-center text-center" style="font-size: 30px">Login</div>
           </div>
-          <div class="card-body px-lg-5 py-lg-5">
+          <div class="card-body px-lg-10 py-lg-5">
             <div class="text-center text-muted mb-4">
               <small>Sign in with credentials</small>
             </div>
             <form role="form">
-              <div class="form-group mb-3">
+              <!--VISIBLE IN PART 1 -->
+              <div *ngIf="!isPartB() && !isPartC();" class="form-group mb-3">
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend">
-                    <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    <span class="input-group-text"><i class="ni ni-single-02"></i></span>
                   </div>
-                  <input class="form-control" placeholder="Email" type="email">
+                  <input class="form-control" placeholder="Username" type="text">
                 </div>
               </div>
-              <div class="form-group focused">
+              <!--VISIBLE IN PART 2 -->
+              <div *ngIf="isPartB();" class="form-group focused"> 
                 <div class="input-group input-group-alternative">
                   <div class="input-group-prepend">
                     <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
@@ -36,12 +38,17 @@
                   <input class="form-control" placeholder="Password" type="password">
                 </div>
               </div>
-              <div class="custom-control custom-control-alternative custom-checkbox">
-                <input class="custom-control-input" id=" customCheckLogin" type="checkbox">
-                <label class="custom-control-label" for=" customCheckLogin"><span>Remember me</span></label>
+              <div *ngIf="isPartB();" class="form-group focused"> 
+                <div class="input-group input-group-alternative">
+                  <div class="input-group-prepend">
+                    <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                  </div>
+                  <input class="form-control" placeholder="SMS CODE" type="password">
+                </div>
               </div>
+
               <div class="text-center">
-                <button type="button" class="btn btn-primary my-4" routerLink="/home">Sign in</button>
+                <button id="btnSubmit" type="button" class="btn btn-primary my-4" (click)="signIn()">Next</button>
               </div>
             </form>
           </div>
@@ -56,6 +63,21 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="shape shape-style-1 bg-gradient-default">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span> 
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
 </section>
 <app-footer></app-footer>
