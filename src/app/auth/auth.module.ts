@@ -6,13 +6,16 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
-
+import { LoginComponent } from '../login/login.component';
+import { SignUpComponent } from '../sign-up/sign-up.component';
 import { AuthRoutingModule } from './auth-routing.module';
 import { environment } from '../../environments/environment';
 
 
 @NgModule({
   declarations: [
+    LoginComponent,
+    SignUpComponent,
   ],
   imports: [
     
