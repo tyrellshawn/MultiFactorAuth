@@ -7,24 +7,18 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 
-import { SigninComponent } from './signin/signin.component';
-import { SignupComponent } from './signup/signup.component';
 import { AuthRoutingModule } from './auth-routing.module';
-import { MaterialModule } from '../material.module';
 import { environment } from '../../environments/environment';
-import { GenerateCodeComponent } from './generate-code/generate-code.component';
+
 
 @NgModule({
   declarations: [
-    SigninComponent,
-    SignupComponent,
-    GenerateCodeComponent
   ],
   imports: [
+    
     CommonModule,
     FormsModule,
     AuthRoutingModule,
-    MaterialModule,
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,

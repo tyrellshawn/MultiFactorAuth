@@ -6,16 +6,19 @@ import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HomeComponent } from './home/home.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { AuthModule } from './auth/auth.module';
+import { GenerateCodeComponent } from './auth/generate-code/generate-code.component';
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    GenerateCodeComponent
   ],
   imports: [
+    AuthModule,
     BrowserModule,
     AppRoutingModule
   ],
