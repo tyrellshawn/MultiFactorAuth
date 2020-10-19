@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
   }
   signIn(): void{
     console.log("Start Clicked")
-    this.button.nativeElement.innerHTML = "Sign In";
+    
   }
 
 }

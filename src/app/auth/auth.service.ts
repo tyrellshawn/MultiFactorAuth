@@ -66,8 +66,6 @@ export class AuthService implements OnInit, OnDestroy {
   signupUserWithEmail(
     email: string,
     password: string,
-    firstname: string,
-    lastname: string,
     phoneNumber: string
   ) {
     this.firebaseAuth
@@ -75,8 +73,8 @@ export class AuthService implements OnInit, OnDestroy {
       .then(user => {
         this.firebaseDatabase.database
           .ref('/users')
-          .push({ email, firstname, lastname, phoneNumber });
-        this.router.navigate(['/signin']);
+          .push({ email,  phoneNumber });
+        this.router.navigate(['/login']);
         // this.loginUserWithEmail(email, password);
       })
       .catch(error =>

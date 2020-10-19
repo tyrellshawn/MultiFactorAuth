@@ -26,5 +26,6 @@ import { environment } from '../../environments/environment';
     AngularFireDatabaseModule,
     AngularFireStorageModule
   ],
+  exports: [FormsModule, ReactiveFormsModule,],
 })
 export class AuthModule { }
